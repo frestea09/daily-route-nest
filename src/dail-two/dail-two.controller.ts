@@ -55,6 +55,7 @@ export class DailTwoController {
   deleteProductIlman(@Param('id') id: number) {
     return this.dailTwoService.deleteProductIlman(Number(id));
   }
+
   @Get('/product/:id')
   getProductionId(@Param('id') id: string) {
     return id;

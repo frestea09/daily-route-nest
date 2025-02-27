@@ -30,8 +30,8 @@ model Post {
 }
 
 model Product{
-  idProduct  Int      @default(autoincrement()) @id
+  idProduct  Int  @default(autoincrement()) @id
   nameProduct String 
   qty Int
-  description String?
+  description String? 
 }
