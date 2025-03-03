@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DailTwoModule } from './dail-two/dail-two.module';
 import { PrismaService } from './prisma/prisma.service';
 import { DailyThreeModule } from './daily-three/daily-three.module';
+import { DailyFourModule } from './daily-four/daily-four.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { DailyThreeModule } from './daily-three/daily-three.module';
     }),
     DailTwoModule,
     DailyThreeModule,
+    DailyFourModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
