@@ -9,6 +9,7 @@ import { DailyThreeModule } from './daily-three/daily-three.module';
 import { DailyFourModule } from './daily-four/daily-four.module';
 import { DailyFiveModule } from './daily-five/daily-five.module';
 import { DailySixModule } from './daily-six/daily-six.module';
+import { DailySevenModule } from './daily-seven/daily-seven.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { DailySixModule } from './daily-six/daily-six.module';
     DailyFourModule,
     DailyFiveModule,
     DailySixModule,
+    DailySevenModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],

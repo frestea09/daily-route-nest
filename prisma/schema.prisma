@@ -35,3 +35,17 @@ model Product{
   qty Int
   description String? 
 }
+model Item {
+  id      Int     @id @default(autoincrement())
+  nameItem String @unique
+  qty Int
+  roleItem RoleItem? @relation
+  }
+
+model RoleItem {
+  id Int  @id @default(autoincrement())
+  nameRole String
+  item Item @relation(fields: [itemId], references: [id])
+  itemId Int @unique
+
+}
