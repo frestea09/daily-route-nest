@@ -10,6 +10,11 @@ import { DailyFourModule } from './daily-four/daily-four.module';
 import { DailyFiveModule } from './daily-five/daily-five.module';
 import { DailySixModule } from './daily-six/daily-six.module';
 import { DailySevenModule } from './daily-seven/daily-seven.module';
+import { DailyEightModule } from './daily-eight/daily-eight.module';
+import { DailyNineModule } from './daily-nine/daily-nine.module';
+import { CacheModule } from '@nestjs/cache-manager';
+import { DataService } from './data/data.service';
+import { DataController } from './data/data.controller';
 
 @Module({
   imports: [
@@ -23,8 +28,11 @@ import { DailySevenModule } from './daily-seven/daily-seven.module';
     DailyFiveModule,
     DailySixModule,
     DailySevenModule,
+    DailyEightModule,
+    DailyNineModule,
+    CacheModule.register({ isGlobal: true, ttl: 100 }),
   ],
-  controllers: [AppController],
-  providers: [AppService, PrismaService],
+  controllers: [AppController, DataController],
+  providers: [AppService, PrismaService, DataService],
 })
 export class AppModule {}
