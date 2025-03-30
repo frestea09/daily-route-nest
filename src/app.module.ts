@@ -15,6 +15,8 @@ import { DailyNineModule } from './daily-nine/daily-nine.module';
 import { CacheModule } from '@nestjs/cache-manager';
 import { DataService } from './data/data.service';
 import { DataController } from './data/data.controller';
+import { DailyTenModule } from './daily-ten/daily-ten.module';
+import { DailyRouteModule } from './daily-route/daily-route.module';
 
 @Module({
   imports: [
@@ -31,6 +33,8 @@ import { DataController } from './data/data.controller';
     DailyEightModule,
     DailyNineModule,
     CacheModule.register({ isGlobal: true, ttl: 100 }),
+    DailyTenModule,
+    DailyRouteModule,
   ],
   controllers: [AppController, DataController],
   providers: [AppService, PrismaService, DataService],
